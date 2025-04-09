@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sidebar {
+            scrollbar-width: thin;
+            scrollbar-color: #71717a transparent;
+        }
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: #71717a;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-[#0f0f0f] text-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-[#0f0f0f] z-50 flex items-center justify-between px-4 h-14 border-b border-[#303030]">
+        <div class="flex items-center">
+            <button class="p-2 mr-2 rounded-full hover:bg-[#272727]">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            <div class="flex items-center cursor-pointer">
+                <i class="fab fa-youtube text-red-600 text-2xl mr-1"></i>
+                <span class="font-bold text-xl">YouTube</span>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center flex-grow max-w-2xl mx-4">
+            <div class="flex w-full">
+                <input type="text" placeholder="Search" class="bg-[#121212] border border-[#303030] rounded-l-full px-4 py-2 w-full focus:outline-none focus:border-blue-500">
+                <button class="bg-[#222222] border border-l-0 border-[#303030] rounded-r-full px-5 hover:bg-[#303030]">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="ml-4 p-2 rounded-full bg-[#222222] hover:bg-[#303030]">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <div class="flex items-center">
+            <button class="p-2 mx-1 rounded-full hover:bg-[#272727]">
+                <i class="fas fa-video text-xl"></i>
+            </button>
+            <button class="p-2 mx-1 rounded-full hover:bg-[#272727]">
+                <i class="fas fa-bell text-xl"></i>
+            </button>
+            <button class="w-8 h-8 ml-2 rounded-full bg-blue-500 flex items-center justify-center">
+                <span class="text-sm font-medium">U</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex pt-14">
+        <!-- Sidebar -->
+        <aside class="sidebar fixed left-0 top-14 bottom-0 w-64 bg-[#0f0f0f] overflow-y-auto hidden md:block">
+            <div class="py-2">
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-home mr-6 text-xl"></i>
+                    <span>Home</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-compass mr-6 text-xl"></i>
+                    <span>Explore</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-play-circle mr-6 text-xl"></i>
+                    <span>Shorts</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-subscription mr-6 text-xl"></i>
+                    <span>Subscriptions</span>
+                </div>
+            </div>
+
+            <div class="border-t border-[#303030] pt-2">
+                <h3 class="px-4 py-2 text-sm font-medium">You</h3>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-user-circle mr-6 text-xl"></i>
+                    <span>Your channel</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-history mr-6 text-xl"></i>
+                    <span>History</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-play mr-6 text-xl"></i>
+                    <span>Your videos</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-clock mr-6 text-xl"></i>
+                    <span>Watch later</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-thumbs-up mr-6 text-xl"></i>
+                    <span>Liked videos</span>
+                </div>
+            </div>
+
+            <div class="border-t border-[#303030] pt-2">
+                <h3 class="px-4 py-2 text-sm font-medium">Subscriptions</h3>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-circle mr-6 text-xl text-red-500"></i>
+                    <span>Channel 1</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-circle mr-6 text-xl text-blue-500"></i>
+                    <span>Channel 2</span>
+                </div>
+                <div class="px-4 py-2 hover:bg-[#272727] rounded-lg flex items-center cursor-pointer">
+                    <i class="fas fa-circle mr-6 text-xl text-green-500"></i>
+                    <span>Channel 3</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Video Content -->
+        <main class="ml-0 md:ml-64 p-4 flex-1">
+            <!-- Categories -->
+            <div class="flex space-x-2 mb-4 overflow-x-auto pb-2 scrollbar-hide">
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">All</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Music</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Gaming</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">News</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Live</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Comedy</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Podcasts</button>
+                <button class="px-3 py-1 bg-[#272727] rounded-full whitespace-nowrap">Cooking</button>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Video Card 1 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">10:15</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Never Gonna Give You Up - Rick Astley (Official Music Video)</h3>
+                            <p class="text-sm text-gray-400">Rick Astley • 1.2B views • 5 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/9bZkp7q19f0/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">4:13</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">PSY - GANGNAM STYLE(강남스타일) M/V</h3>
+                            <p class="text-sm text-gray-400">officialpsy • 4.5B views • 10 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">3:24</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Ed Sheeran - Shape of You [Official Video]</h3>
+                            <p class="text-sm text-gray-400">Ed Sheeran • 5.9B views • 6 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 4 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/kJQP7kiw5Fk/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">4:23</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Luis Fonsi - Despacito ft. Daddy Yankee</h3>
+                            <p class="text-sm text-gray-400">Luis Fonsi • 7.8B views • 6 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 5 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/RgKAFK5djSk/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">3:47</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Wiz Khalifa - See You Again ft. Charlie Puth [Official Video]</h3>
+                            <p class="text-sm text-gray-400">Wiz Khalifa • 6.1B views • 8 years ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 6 -->
+                <div class="cursor-pointer">
+                    <div class="relative">
+                        <img src="https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg" alt="Video thumbnail" class="w-full rounded-xl">
+                        <span class="absolute bottom-1 right-1 bg-black bg-opacity-80 px-1 text-xs rounded">3:22</span>
+                    </div>
+                    <div class="flex mt-2">
+                        <div class="flex-shrink-0 mr-3">
+                            <div class="w-9 h-9 rounded-full bg-gray-500"></div>
+                        </div>
+                        <div>
+                            <h3 class="font-medium line-clamp-2">Mark Ronson - Uptown Funk ft. Bruno Mars</h3>
+                            <p class="text-sm text-gray-400">Mark Ronson • 4.8B views • 8 years ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Simple navigation functionality
+        document.querySelectorAll('.sidebar div, .categories button').forEach(item => {
+            item.addEventListener('click', () => {
+                alert('This would navigate to another page in a real implementation');
+            });
+        });
+    </script>
+</body>
+</html>
